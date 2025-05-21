@@ -1,0 +1,156 @@
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  position: relative;
+  background-color: #dbe9f4; /* Very light blue background */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: -1; /* Ensure the image stays in the background */
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #a6c8ff,
+    #dbe9f4
+  ); /* Soft blue gradient background */
+}
+
+/* Login Content Box */
+.login-content {
+  background: #ffffff; /* White for clarity */
+  padding: 30px; /* Slightly reduced padding */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 380px; /* Slightly smaller width */
+  text-align: center;
+  border-top: 6px solid #6699cc; /* Medium blue border */
+}
+
+/* Heading */
+h1 {
+  font-size: 2rem; /* Slightly smaller */
+  margin-bottom: 20px;
+  color: #2c3e50; /* Dark blue text */
+  font-weight: bold;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input Fields */
+input {
+  padding: 10px; /* Smaller padding */
+  margin-bottom: 10px;
+  border: 1px solid #a6c8ff; /* Light blue border */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  color: #2c3e50;
+  background-color: #f7fbff;
+}
+
+input:focus {
+  border-color: #467bbf; /* Medium blue focus */
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Submit Button */
+button {
+  padding: 10px; /* Smaller padding */
+  font-size: 0.95rem; /* Slightly smaller font */
+  background-color: #6699cc; /* Medium blue button */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #467bbf; /* Darker blue on hover */
+}
+
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  color: #2c3e50;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: #6699cc;
+}
+
+/* Remember Me Checkbox */
+.remember-me-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.remember-me-container input {
+  accent-color: #6699cc;
+}
+
+/* Error Message */
+.error-message {
+  color: #e74c3c; /* Soft red for error messages - keep as is */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Links in General */
+a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}

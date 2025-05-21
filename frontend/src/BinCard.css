@@ -1,0 +1,154 @@
+.bin-card-container {
+  padding: 20px;
+  background-color: #eaf0f6; /* Soft bluish-gray */
+  border: 1px solid #cbd6e2; /* Light neutral blue border */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.bin-card-header {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #2c3e50; /* Professional dark slate blue */
+  font-weight: bold;
+}
+
+.static-fields-form {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.static-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.static-field input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #bccad6; /* Light blue-gray border */
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f4f7fa; /* Light background */
+  transition: all 0.3s ease;
+  color: #2c3e50;
+}
+
+.static-field input:focus {
+  border-color: #4682b4; /* Soft steel blue focus */
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(70, 130, 180, 0.5);
+}
+
+.static-field input::placeholder {
+  color: #6b7c93; /* Neutral muted blue text */
+  font-weight: 500;
+}
+
+.bin-card-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.bin-card-table th,
+.bin-card-table td {
+  border: 1px solid #ccd6dd;
+  padding: 8px;
+  text-align: left;
+}
+
+.bin-card-table th {
+  background-color: #5d8aa8; /* Muted blue header */
+  color: white;
+  font-weight: 600;
+}
+
+.bin-card-table tr:nth-child(even) {
+  background-color: #f0f4f8; /* Light blue row alt */
+}
+
+.bin-card-table td input {
+  width: 80%;
+  padding: 6px;
+  border: 1px solid #ccd6dd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.add-button,
+.delete-row-button,
+.submit-button,
+.save-button {
+  padding: 8px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 13px; /* Smaller font */
+  transition: background-color 0.3s ease;
+}
+
+/* Add button */
+.add-button {
+  background-color: #5b9bd5; /* Muted blue */
+}
+.add-button:hover {
+  background-color: #417cbf; /* Slightly darker on hover */
+}
+
+/* Delete button */
+.delete-row-button {
+  background-color: #e74c3c; /* Soft red */
+}
+.delete-row-button:hover {
+  background-color: #c0392b;
+}
+
+/* Submit button - replaced green with neutral gray */
+.submit-button {
+  background-color: #7f8c8d; /* Neutral gray */
+}
+.submit-button:hover {
+  background-color: #626f70;
+}
+
+/* Save button */
+.save-button {
+  background-color: #3498db; /* Professional blue */
+}
+.save-button:hover {
+  background-color: #2b78b4;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .static-fields-form {
+    grid-template-columns: 1fr;
+  }
+
+  .static-field input {
+    max-width: 100%;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .action-buttons button {
+    width: 100%;
+  }
+}

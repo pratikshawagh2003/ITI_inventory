@@ -1,0 +1,186 @@
+/* Color System */
+:root {
+  --primary-color: #006494; /* Deep blue for headings and primary text */
+  --secondary-color: #0582ca; /* Medium blue for buttons and accents */
+  --accent-color: #00a6fb; /* Bright sky blue for highlights and hover */
+  --dark-blue: #003554; /* Dark blue for minimal accents and borders */
+  --background-color: #f9fbfd; /* Very light blue-white background */
+  --card-background: #ffffff; /* White for cards and forms */
+  --table-header-bg: #0582ca; /* Medium blue for table headers */
+  --table-row-bg: #e6f2fb; /* Very light blue for table rows */
+  --text-color: #003554; /* Dark blue for text */
+  --input-background: #f0f7ff; /* Very light blue background for inputs */
+  --error-color: #e74c3c; /* Red for errors */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Form Container */
+.form-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px 30px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 102, 163, 0.1);
+}
+
+/* Title Styling */
+h2 {
+  color: var(--primary-color);
+  font-family: Arial, sans-serif;
+  margin: 10px 0 15px 0;
+  padding: 0;
+  text-align: center;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid var(--dark-blue); /* Minimal dark border */
+  word-wrap: break-word;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: white;
+  font-size: 16px;
+}
+
+td {
+  background-color: var(--table-row-bg);
+  color: var(--text-color);
+}
+
+td input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--dark-blue);
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+td input:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  background-color: #d9f0ff;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  background-color: var(--secondary-color);
+  box-shadow: 0 3px 6px rgba(5, 130, 202, 0.3);
+}
+
+button:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 5px 10px rgba(0, 166, 251, 0.5);
+}
+
+/* Add Row Button */
+.add-btn {
+  margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--accent-color);
+  color: var(--card-background);
+  box-shadow: 0 3px 6px rgba(0, 166, 251, 0.4);
+}
+
+.submit-btn:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  box-shadow: 0 5px 10px rgba(5, 130, 202, 0.6);
+}
+
+/* Save Button */
+.save-button {
+  background-color: var(--primary-color);
+  color: white;
+  margin-right: 10px;
+  box-shadow: 0 3px 6px rgba(0, 100, 148, 0.4);
+}
+
+.save-button:hover {
+  background-color: var(--accent-color);
+  color: var(--card-background);
+  box-shadow: 0 5px 10px rgba(0, 166, 251, 0.6);
+}
+
+/* Delete Button */
+.remove-btn {
+  background-color: var(--error-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(231, 76, 60, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b;
+  box-shadow: 0 5px 10px rgba(192, 57, 43, 0.5);
+}
+
+/* Center Button Layout */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    padding: 15px 20px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}

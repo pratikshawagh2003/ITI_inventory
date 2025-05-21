@@ -1,0 +1,140 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* The main container */
+.homepage {
+  position: relative;
+  height: 100vh;
+}
+
+/* Background images container */
+.background-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-images img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fadeInOut 16s infinite;
+}
+
+/* Animation for fading images */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
+
+.background-images img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.background-images img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.background-images img:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.background-images img:nth-child(4) {
+  animation-delay: 12s;
+}
+
+/* Overlay to darken background */
+.overlay {
+  position: relative;
+  height: 100%;
+  background: rgba(0, 0, 50, 0.6); /* Slight blue tint for overlay */
+  color: white;
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #cce4ff; /* Light blue logo */
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 80%;
+}
+
+.welcome-text {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #cce4ff; /* Light blue text */
+}
+
+.animated-text {
+  animation: fadeIn 2s ease-in-out, slideIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* CTA button styling */
+.cta-btn {
+  background: #007bff; /* Primary blue */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #339dff; /* Lighter blue on hover */
+}

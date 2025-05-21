@@ -1,0 +1,253 @@
+/* Color System */
+:root {
+  --primary-color: #34495e; /* Muted navy for main elements */
+  --secondary-color: #8faacc; /* Soft muted blue for background */
+  --text-color: #2c3e50; /* Dark slate text */
+  --button-background: #6fa4c4; /* Muted sky blue */
+  --button-hover: #4f84a7; /* Slightly deeper blue on hover */
+  --card-background: #dbe4ec; /* Light bluish card background */
+  --table-header-bg: #6fa4c4; /* Blue for table headers */
+  --table-row-bg: #ffffff; /* White for table rows */
+  --error-color: #ff6347; /* Red for delete */
+  --success-color: #81c784; /* Green for success */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+.voucher-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.voucher-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.voucher-table th {
+  background-color: var(--table-header-bg) !important;
+  color: white !important;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color) !important;
+  font-weight: bold;
+  font-size: 28px;
+  font-family: Arial, sans-serif;
+}
+
+.subtitle {
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd !important;
+  word-wrap: break-word;
+}
+
+th {
+  background-color: var(--table-header-bg) !important;
+  color: white;
+  font-size: 16px;
+}
+
+td {
+  background-color: var(--table-row-bg) !important;
+}
+
+td input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd !important;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+td input:focus {
+  border-color: var(--primary-color) !important;
+  outline: none;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Print Button */
+.print-button {
+  background-color: #ff9800; /* kept as is for accent */
+  color: white;
+  margin-right: 10px;
+}
+
+.print-button:hover {
+  background-color: #d17c00;
+}
+
+/* Save Button */
+.save-button {
+  background-color: #607d8b; /* muted blue-gray, no variable so kept */
+  color: white;
+  margin-right: 10px;
+}
+
+.save-button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Add Row Button */
+.add-row-button {
+  background-color: var(--button-background);
+  color: white;
+  margin-right: 10px;
+}
+
+.add-row-button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Delete Row Button */
+.delete-row-button {
+  background-color: var(--error-color);
+  color: white;
+  margin-right: 10px;
+}
+
+.delete-row-button:hover {
+  background-color: #e74c3c;
+}
+
+/* Buttons Container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons-container button {
+  margin: 0 10px;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.footer p {
+  color: var(--primary-color);
+}
+
+.footer-roles {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.footer-roles p {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .voucher-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* ==== PRINT STYLES: Black & White only, no blues ==== */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+    color: #000 !important; /* Force black text */
+    background-color: #fff !important; /* Force white background */
+    border-color: #000 !important; /* Force black borders */
+    box-shadow: none !important; /* Remove shadows */
+    text-shadow: none !important; /* Remove text shadows */
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    filter: none !important; /* Remove filters */
+    background-image: none !important; /* Remove background images */
+  }
+
+  /* Make table borders black */
+  .print-area table,
+  .print-area th,
+  .print-area td {
+    border: 1px solid #000 !important;
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+
+  /* Inputs, selects, textareas */
+  .print-area input,
+  .print-area select,
+  .print-area textarea {
+    border: 1px solid #000 !important;
+    background-color: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    font-weight: 600 !important;
+  }
+
+  .print-area {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+}

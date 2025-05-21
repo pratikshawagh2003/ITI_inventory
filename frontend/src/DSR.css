@@ -1,0 +1,237 @@
+:root {
+  /* Neutral / Nude Color Palette */
+  --primary-color: #34495e; /* Muted navy */
+  --secondary-color: #8faacc; /* Soft muted blue */
+  --text-color: #2c3e50; /* Dark slate text */
+  --button-background: #6fa4c4; /* Muted sky blue */
+  --button-hover: #4f84a7; /* Deeper blue hover */
+  --card-background: #dbe4ec; /* Light bluish card background */
+  --table-header-bg: #6fa4c4; /* Blue for table headers */
+  --table-row-bg: #ffffff; /* White for table rows */
+  --error-color: #ff6347; /* Red for delete */
+  --error-color-light: #ff6f61; /* Light red for delete button */
+  --add-color: #3d94f6; /* Bright blue for add */
+  --print-color: #ff8c42; /* Orange for print */
+  --previous-color: #6c63ff; /* Purple for previous */
+  --button-text-color: #ffffff; /* White text for buttons */
+  --button-disabled-bg: #cccccc; /* Disabled button background */
+}
+
+/* Container */
+.dsr-container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: var(--table-row-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.dsr-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/* Scrollable Form Container */
+.dsr-form-container {
+  max-height: 500px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.dsr-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--table-row-bg);
+}
+
+.dsr-table th {
+  border: 1px solid #ddd;
+  padding: 12px 8px;
+  background-color: var(--table-header-bg);
+  color: var(--button-text-color);
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.dsr-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+/* Inputs */
+.dsr-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Delete Button (inside table) */
+.dsr-delete-btn {
+  background-color: var(--error-color-light);
+  color: var(--button-text-color);
+  border: none;
+  padding: 5px 10px; /* Smaller padding */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px; /* Smaller font */
+  transition: background-color 0.3s ease;
+}
+
+.dsr-delete-btn:hover {
+  background-color: var(--error-color);
+}
+
+/* Buttons Container */
+.dsr-button-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* General Buttons */
+.dsr-btn {
+  color: var(--button-text-color);
+  border: none;
+  padding: 8px 16px; /* Reduced padding for smaller buttons */
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+  font-weight: 600;
+  font-size: 14px; /* Smaller font size */
+  transition: background-color 0.3s ease;
+}
+
+/* Specific Buttons */
+.dsr-btn.add {
+  background-color: var(--add-color);
+}
+.dsr-btn.add:hover {
+  background-color: #2a75d3;
+}
+
+.dsr-btn.print {
+  background-color: var(--print-color);
+}
+.dsr-btn.print:hover {
+  background-color: #cc732f;
+}
+
+.dsr-btn.save {
+  background-color: #3f7930; /* Neutral gray instead of green */
+}
+.dsr-btn.save:hover {
+  background-color: #6e6e6e;
+}
+
+.dsr-btn.previous {
+  background-color: var(--previous-color);
+}
+.dsr-btn.previous:hover {
+  background-color: #4036ff;
+}
+
+.dsr-btn.close {
+  background-color: var(--error-color);
+}
+.dsr-btn.close:hover {
+  background-color: #c9302c;
+}
+
+.dsr-btn.delete {
+  background-color: var(--error-color);
+}
+.dsr-btn.delete:hover {
+  background-color: #c9302c;
+}
+
+/* Modal */
+.dsr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dsr-modal-content {
+  background-color: var(--table-row-bg);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow-y: auto;
+}
+
+/* Print Media */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #print-section,
+  #print-section * {
+    visibility: visible;
+    color: #000 !important; /* Force black/dark text */
+    font-weight: 600 !important; /* Make it bolder for better visibility */
+  }
+
+  #print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* Dropdown + button container */
+.dsr-delete-row-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Label */
+.dsr-delete-row-container label {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+
+/* Dropdown */
+.dsr-delete-dropdown {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: 1.5px solid #888;
+  font-size: 14px;
+  background-color: var(--table-row-bg);
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.dsr-delete-dropdown:hover,
+.dsr-delete-dropdown:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 6px rgba(52, 73, 94, 0.53);
+}

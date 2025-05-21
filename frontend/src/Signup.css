@@ -1,0 +1,180 @@
+/* Color System */
+:root {
+  --primary-color: #2c3e50; /* Dark navy blue for main elements */
+  --secondary-color: #5dade2; /* Soft sky blue for secondary elements */
+  --text-color: #2c3e50; /* Dark text for contrast */
+  --button-background: #5499c7; /* Softer blue for buttons */
+  --button-hover: #467bbf; /* Muted blue for hover */
+  --card-background: #f4f6f7; /* Soft very light gray for cards */
+  --table-header-bg: #5499c7; /* Soft blue for table header */
+  --table-row-bg: #ffffff; /* White for table rows */
+  --error-color: #e74c3c; /* Soft red for error/delete buttons */
+  --input-background: #f7fbff; /* Very light blue-gray for input backgrounds */
+  --neutral-blue: #8faacc; /* Muted neutral blue */
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: var(--card-background); /* Very light gray background */
+  color: var(--text-color);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Form Container */
+.form-container {
+  width: 90%;
+  margin: 20px auto;
+  padding: 30px; /* Slightly bigger padding for breathing room */
+  background-color: #ffffff; /* White background for clarity */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+/* Title styling */
+h2 {
+  color: var(--primary-color);
+  font-family: Arial, sans-serif;
+  margin: 10px 0 15px 0;
+  padding: 0;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  table-layout: fixed;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #bdc3c7; /* Light gray borders */
+  word-wrap: break-word;
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+td {
+  background-color: var(--table-row-bg);
+}
+
+td input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a6c8ff; /* Light blue border */
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  background-color: var(--input-background);
+  color: var(--text-color);
+  transition: border-color 0.3s;
+}
+
+td input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+/* Add Row Button */
+.add-btn {
+  background-color: var(--button-background);
+  color: white;
+  margin-right: 10px;
+}
+
+.add-btn:hover {
+  background-color: var(--button-hover);
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: var(--neutral-blue);
+  color: white;
+  margin-right: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #7b9abf; /* Slightly darker neutral blue */
+}
+
+/* Save Button */
+.save-button {
+  background-color: var(--neutral-blue);
+  color: white;
+  margin-right: 10px;
+}
+
+.save-button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Center Button Layout */
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Delete Button */
+.remove-btn {
+  background-color: var(--error-color);
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.remove-btn:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
